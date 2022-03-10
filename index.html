@@ -24,18 +24,18 @@
   <main class="card">
     <div class="bill">
       <label for="bill" class="bill__title">Bill</label>
-      <input id="bill" class="bill__input input-number" type="number" value="140.00">
+      <input id="bill" class="bill__input input-number" type="number">
     </div>
 
     <div class="tip">
       <label for="tip" class="tip__title">Select Tip %</label>
 
       <div class="tip__grid">
-        <div class="btn btn--small">5%</div>
-        <div class="btn btn--small">10%</div>
-        <div class="btn btn--small btn--active">15%</div>
-        <div class="btn btn--small">25%</div>
-        <div class="btn btn--small">50%</div>
+        <div class="btn btn--small" data-value=".05" data-index="0">5%</div>
+        <div class="btn btn--small" data-value=".1" data-index="1">10%</div>
+        <div class="btn btn--small" data-value=".15" data-index="2">15%</div>
+        <div class="btn btn--small" data-value=".25" data-index="3">25%</div>
+        <div class="btn btn--small" data-value=".5" data-index="4">50%</div>
         <input id="tip" class="tip__input input-number input-number--small" type="number" placeholder="Custom">
       </div>
     </div>
@@ -43,10 +43,10 @@
     <div class="no-of-people">
       <label for="no-of-people" class="no-of-people__title">
         Number of People
-        <span class="warning">Can't be zero</span>
+        <span id="warning" class="warning">Can't be zero</span>
       </label>
       <div>
-        <input id="no-of-people" class="no-of-people__input input-number" type="number" value="1">
+        <input id="no-of-people" class="no-of-people__input input-number" type="number">
       </div>
     </div>
 
@@ -59,7 +59,7 @@
           </h2>
 
           <p class="amount">
-          $<span>0.00</span>
+          $<span id="amount-tip">0.00</span>
           </p>
         </div>
         <div class="result__amount-total">
@@ -69,15 +69,17 @@
           </h2>
 
           <p class="amount">
-          $<span>0.00</span>
+          $<span id="amount-total">0.00</span>
           </p>
         </div>
       </div>
 
-      <div class="btn btn--primary">
+      <div id="reset" class="btn btn--primary">
         RESET
       </div>
     </div>
   </main>
+
+  <script src="public/js/app.js"></script>
 </body>
 </html>

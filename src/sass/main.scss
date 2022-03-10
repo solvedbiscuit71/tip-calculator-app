@@ -249,7 +249,13 @@ header {
       "no-of-people result";
   }
 
-  .card .tip__grid {
-    grid-template-columns: repeat(3,1fr);
+  .card {
+    .tip__grid {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .result p.amount {
+      font-size: 3rem;
+    }
   }
 }

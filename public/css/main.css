@@ -204,6 +204,9 @@ header {
   .card .tip__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .card .result p.amount {
+    font-size: 3rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
