@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tip Calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+</head>
+<body>
+  <header>
+    <h1 style="display: none;">SPLITTER</h1>
+    <img src="images/logo.svg" alt="Logo">
+  </header>
+
+  <main class="card">
+    <div class="bill">
+      <label for="bill" class="bill__title">Bill</label>
+      <input id="bill" class="bill__input input-number" type="number">
+    </div>
+
+    <div class="tip">
+      <label for="tip" class="tip__title">Select Tip %</label>
+
+      <div class="tip__grid">
+        <div class="btn btn--small">5%</div>
+        <div class="btn btn--small">10%</div>
+        <div class="btn btn--small">15%</div>
+        <div class="btn btn--small">25%</div>
+        <div class="btn btn--small">50%</div>
+        <input id="tip" class="tip__input input-number input-number--small" type="number" placeholder="Custom">
+      </div>
+    </div>
+
+    <div class="no-of-people">
+      <label for="no-of-people" class="no-of-people__title">Number of People</label>
+      <div>
+        <input id="no-of-people" class="no-of-people__input input-number input-number--warning" type="number">
+        <span class="warning">Can't be zero</span>
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="result__tip-amount">
+        <h2>
+          Tip Amount
+          <span>/ person</span>
+        </h2>
+
+        <p class="amount">
+          $<span>0.00</span>
+        </p>
+      </div>
+      <div class="result__total">
+        <h2>
+          Total
+          <span>/ person</span>
+        </h2>
+
+        <p class="amount">
+          $<span>0.00</span>
+        </p>
+      </div>
+
+      <div class="btn btn--primary">
+        RESET
+      </div>
+    </div>
+  </main>
+</body>
+</html>
