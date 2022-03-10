@@ -1,0 +1,6 @@
+# --------: NodeJS :--------------
+# Since, `lite-server` is used as a development server for browsersync
+node_modules/
+
+# --------: OS :------------------
+.DS_Store
