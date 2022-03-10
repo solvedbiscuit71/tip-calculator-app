@@ -168,13 +168,14 @@ header {
   position: relative;
   right: 0.75em;
   display: flex;
-  gap: 2em;
   flex-flow: column;
+  justify-content: space-between;
 }
-.card .result div:nth-child(1), .card .result div:nth-child(2) {
+.card .result__amount div {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2em;
 }
 .card .result h2 {
   font-size: 1rem;
@@ -190,6 +191,19 @@ header {
   color: var(--btn-bg);
   font-size: 2rem;
   margin: 0;
+}
+
+/* desktop design */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 921px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "bill result" "tip result" "no-of-people result";
+  }
+
+  .card .tip__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
