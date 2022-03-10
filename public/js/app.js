@@ -3,22 +3,28 @@ const amountTip = document.getElementById("amount-tip")
 const amountTotal = document.getElementById("amount-total")
 
 function updateAmount(){
+  if (peopleCount === 0) {
+    amountTip.innerText = "0.00"
+    amountTotal.innerText = "0.00"
+    return
+  }
+
   const tipAmount = billValue * tipValue / peopleCount
   amountTip.innerText = Math.trunc(tipAmount * 100) / 100
   amountTotal.innerText = Math.round((( billValue / peopleCount ) + tipAmount) * 100) / 100 
 }
 
 function resetValue(){
-  billInput.value = 142.55
-  billValue = 142.55
+  billInput.value = 0
+  billValue = 0
 
   tipInput.value = ""
-  tipValue = 0.15
-  updateTipActive(2)
+  tipValue = 0
+  updateTipActive()
 
-  peopleInput.value = 5
+  peopleInput.value = 0
   peopleInput.classList.remove("input-number--warning")
-  peopleCount = 5
+  peopleCount = 0
   warning.style.display = "none"
 
   updateAmount()
